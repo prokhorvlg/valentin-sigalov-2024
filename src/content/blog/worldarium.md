@@ -11,8 +11,8 @@ tags:
   - typescript
   - postgres
 description: "Full-stack web app for making and sharing maps, built with NextJS."
-sourceURL: "https://github.com/prokhorvlg/sunset-astro"
-liveURL: "https://www.sunset-system.com/"
+sourceURL: "/"
+liveURL: "/"
 
 logo: "../../assets/images/worldarium-logo.png"
 themeColor: "#f160c3"
