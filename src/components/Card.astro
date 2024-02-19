@@ -1,25 +1,25 @@
 ---
-import { slugifyStr } from "@utils/slugify";
-import Datetime from "./Datetime";
-import type { CollectionEntry } from "astro:content";
-import classes from "./Card.module.css";
-import Tag from "@components/Tag";
+import { slugifyStr } from "@utils/slugify"
+import Datetime from "./Datetime"
+import type { CollectionEntry } from "astro:content"
+import classes from "./Card.module.css"
+import Tag from "@components/Tag"
 import {
   IconSunset2,
   IconBrandGithub,
   IconArrowRight,
   IconStar,
   IconDeviceDesktop,
-} from "@tabler/icons-react";
+} from "@tabler/icons-react"
 
 export interface Props {
-  slug: string;
-  frontmatter: CollectionEntry<"blog">["data"];
-  secHeading?: boolean;
+  slug: string
+  frontmatter: CollectionEntry<"blog">["data"]
+  secHeading?: boolean
 }
 
-const { frontmatter, slug } = Astro.props;
-const imageSize = 70;
+const { frontmatter, slug } = Astro.props
+const imageSize = 70
 ---
 
 <li class="card" transition:name={slug}>
@@ -61,20 +61,25 @@ const imageSize = 70;
         <p class="in-progress color-accent">[in progress]</p>
       ) : (
         <>
-          <a
-            href={frontmatter.sourceURL}
-            target="_blank"
-            class="link-button row accent"
-          >
-            <IconBrandGithub /> Source
-          </a>
-          <a
-            href={frontmatter.liveURL}
-            target="_blank"
-            class="link-button row accent"
-          >
-            <IconDeviceDesktop /> Live
-          </a>
+          {frontmatter.sourceURL && (
+            <a
+              href={frontmatter.sourceURL}
+              target="_blank"
+              class="link-button row accent"
+            >
+              <IconBrandGithub /> Source
+            </a>
+          )}
+
+          {frontmatter.liveURL && (
+            <a
+              href={frontmatter.liveURL}
+              target="_blank"
+              class="link-button row accent"
+            >
+              <IconDeviceDesktop /> Live
+            </a>
+          )}
         </>
       )
     }

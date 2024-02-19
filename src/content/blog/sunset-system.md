@@ -11,7 +11,7 @@ tags:
   - react
   - typescript
   - jotai
-description: "Worldbuilding blog (and more) designed and built with Astro."
+description: "Sci-fi worldbuilding blog (and more) designed and built with Astro."
 sourceURL: "https://github.com/prokhorvlg/sunset-astro"
 liveURL: "https://www.sunset-system.com/"
 
