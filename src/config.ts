@@ -7,7 +7,7 @@ export const SITE: Site = {
   title: "Valentin Sigalov",
   ogImage: "astropaper-og.jpg",
   lightAndDarkMode: false,
-  postPerPage: 3,
+  postPerPage: 9,
   scheduledPostMargin: 15 * 60 * 1000, // 15 minutes
 };
 

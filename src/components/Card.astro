@@ -38,15 +38,15 @@ const imageSize = 70;
   {/* <IconSunset2 size={120} /> */}
 
   <div class="content">
-    <a href={`/posts/${slug}` ?? "/"} class="heading-link">
-      <h2
-        style={{
-          color: frontmatter.themeColor ?? undefined,
-        }}
-      >
-        {frontmatter.title}
-      </h2>
-    </a>
+    <!-- <a href={`/posts/${slug}` ?? "/"} class="heading-link"> -->
+    <h2
+      style={{
+        color: frontmatter.themeColor ?? undefined,
+      }}
+    >
+      {frontmatter.title}
+    </h2>
+    <!-- </a> -->
 
     <p>{frontmatter.description}</p>
 
@@ -116,7 +116,7 @@ const imageSize = 70;
     }
   }
   @media (max-width: 1100px) {
-    .heading-link {
+    .h2 {
       display: flex;
       justify-content: center;
       text-align: center;

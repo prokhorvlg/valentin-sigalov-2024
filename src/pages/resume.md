@@ -3,23 +3,79 @@ layout: ../layouts/ResumeLayout.astro
 title: "Resume"
 ---
 
-# Valentin Sigalov
+<h2 style="text-align: center; font-size: 48px; margin-bottom: 0px; margin-top: 40px;">Valentin Sigalov</h1>
 
-Philadelphia, PA, 19104
+<p style="text-align: center; margin-top: 10px; margin-bottom: 20px">Philadelphia, PA | US Citizen (work authorization)</p>
 
-> Software engineer with 8 years of professional experience in projects ranging from high-traffic, responsive websites to enterprise web applications and dashboards. Extensive experience working in financial and healthcare industries. Enjoys user-friendly interactive software, front end technologies, and learning new things. 
+> Software engineer with 8 years of professional experience in projects ranging from high-traffic, responsive websites to enterprise web applications and dashboards. Extensive experience working in financial and healthcare industries. Enjoys user-friendly interactive software, front end technologies, and learning new things.
 
-Work authorization: US Citizen.
+## 🎓 Education
 
-## Experience
+---
 
-### Bardavon Health Innovations, Remote
-Senior Software Engineer (Nov 2022 - Jan 2024)
+### Bachelor of Science (B.S.) in Computer Science
+
+_Drexel University, Philadelphia, PA_
+
+## ⚙️ Skills
+
+---
+
+- **Fundamentals**: HTML, CSS, SCSS, Tailwind, JavaScript, TypeScript, APIs (REST, WebSocket, GraphQL)
+- **Frameworks & Libraries**: React, Vue, Angular, NextJS, Astro, Vite, Knockout, d3js, MUI, jQuery, Jest, Cypress
+- **State Management**: Recoil, Redux, Jotai, Zustand, TanStack React Query, VueX, Pinia
+- **Back End**: Postgres, Firebase, SQL, C#, Java, Python, Visual Studio
+
+## 💼 Experience
+
+---
+
+### Bardavon Health Innovations
+
+_Senior Software Engineer (Nov 2022 - Jan 2024)_
 
 - Collected requirements, architected, and created new web application using Vite, React Query, and Recoil to display physical injury prevention exercises, to bridge services between products from different teams
 - Engineered front end components using React, TypeScript, MUI, and state management tools for features within several enterprise applications centered around rehabilitating injured workers
-- Worked with product owners and graphic designers to ensure vision was accurately translated in user experience 
+- Worked with product owners and graphic designers to ensure vision was accurately translated in user experience
 - Developed full stack and back end solutions for care quality dashboard to assist physical therapists with tracking patient progress, including implementing AWS lambdas using Python and creating Postgres database tables
 - Rapidly adapted during a temporary reassignment to coordinate front end efforts to complete critical features within two-week deadline
 - Ensured code quality through code reviews during pull requests and resolving tech debt during development
 - Crafted end-to-end integration tests using Cypress to prevent user experience issues
+
+### SiteZeus Services
+
+_Front End Software Engineer (Aug 2021 - Oct 2022)_
+
+- Utilized Vue 3, Pinia, Leaflet.js, and REST APIs to integrate state management with a geographical map, allowing user to manipulate thousands of locations and other features for use in statistical analysis and business planning
+- Brainstormed and developed self-motivated improvements to the product during the team's enhancement days,
+  including a toast-style notification system to phase out fragmented legacy system
+- Leveraged Teleport feature to integrate new components and systems with a legacy Knockout application towards
+  ultimate goal of transitioning to a newer codebase built using Vue 3 and Composition API
+- Coordinated directly with and provided feedback to designers, product owners, and quality assurance members in
+  order to create an application with excellent user experience
+- Participated in an agile sprint-based workflow and routine code reviews
+- Led an initiative to incorporate ADA-compliant principles to the product by presenting research to the
+  development and product team and involving the concept during design and development process
+
+### Vanguard Group
+
+_Full Stack Web Developer (Jan 2021 - Aug 2021)_
+
+- Constructed front end features using Angular for the "Open an Account" application with thousands of daily users, as well as for a number of shared applications and component libraries
+- Ensured longevity of components and services through test-driven development, utilizing unit tests with Jasmine and Karma, and end-to-end tests with Cypress
+- Worked closely with product owners and content managers to assure that the features meet the project's
+  requirements and goals
+- Identified, analyzed, and resolved dozens of user experience issues including bugs in real-time through monitoring Splunk dashboards and automated alerts
+- Used Git and Bitbucket version control to collaborate and engage in code reviews
+
+### JP Morgan Chase & Co.
+
+_Front End Web Developer (Mar 2018 - Dec 2020)_
+
+- Created modular components usable on multiple sites within brands, such as site navigation, headers and footers, modals, article grids, tab navigation, accordions, and others
+- Conceptualized full-stack tech approaches for reusable components which can easily be dropped onto page by
+  content authors, then developed responsive front end code based from requirements and designs using HTML5,
+  CSS, LESS, JavaScript, and jQuery
+- Implemented REST APIs and business logic to create dynamic, data-driven interfaces, such as the JPMC Careers
+  search filter components
+- Utilized Git/BitBucket version control system, Jira-integrated branch management, and SonarQube linter to ensure code quality and consistency before reaching production platform

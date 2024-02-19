@@ -24,7 +24,7 @@
     display: flex;
     min-height: 100svh;
     flex-direction: column;
-    background-color: rgba(var(--color-fill), 1);
+    background-color: #21160d;
     position: relative;
 
     font-family: var(--font-body);
@@ -32,12 +32,12 @@
 
     &::after {
       content: "";
-      background: url("../assets/patterns/diag-pattern.svg");
-      background-size: 20px;
+      background: url("../assets/patterns/dot-pattern.svg");
+      background-size: 50px;
       position: absolute;
       inset: 0;
       z-index: -1;
-      opacity: 0.2;
+      opacity: 0.3;
     }
   }
 
@@ -53,11 +53,6 @@
   .color-accent {
     color: rgba(var(--color-accent), 1);
   }
-
-  /* a {
-    @apply outline-2 outline-offset-1 outline-skin-fill 
-    focus-visible:no-underline focus-visible:outline-dashed;
-  } */
 
   svg {
     @apply inline-block group-hover:fill-skin-accent;
@@ -149,5 +144,39 @@
   }
   .focus-outline {
     @apply outline-2 outline-offset-1 outline-skin-fill focus-visible:no-underline focus-visible:outline-dashed;
+  }
+}
+
+.prose {
+  * {
+    color: rgba(var(--color-text-base), 1);
+  }
+
+  blockquote {
+    color: rgba(var(--color-text-base), 1);
+    background: rgba(var(--color-accent), 0.1);
+    padding: 5px 20px;
+    border-left-color: rgba(var(--color-accent), 1);
+  }
+
+  h1 {
+    font-weight: 600;
+    color: rgba(var(--color-accent), 1);
+    letter-spacing: 0;
+  }
+
+  h2 {
+    color: rgba(var(--color-text-base), 1);
+    text-transform: uppercase;
+    /* letter-spacing: 2px; */
+    font-weight: 600;
+  }
+
+  h3 {
+    color: rgba(var(--color-accent), 1);
+    margin-bottom: 10px;
+  }
+  em {
+    margin-bottom: 30px;
   }
 }

@@ -1,6 +1,6 @@
 {
   "arrowParens": "avoid",
-  "semi": true,
+  "semi": false,
   "tabWidth": 2,
   "printWidth": 80,
   "singleQuote": false,
@@ -9,7 +9,10 @@
   "bracketSpacing": true,
   "endOfLine": "lf",
   "editor.formatOnSave": true,
-  "plugins": ["prettier-plugin-astro", "prettier-plugin-tailwindcss"],
+  "plugins": [
+    "prettier-plugin-astro",
+    "prettier-plugin-tailwindcss"
+  ],
   "overrides": [
     {
       "files": "*.astro",

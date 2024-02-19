@@ -19,4 +19,6 @@ logo: "../../assets/images/sunset-system-logo.png"
 themeColor: "#ff8f0b"
 ---
 
-hi
+Fully-custom worldbuilding blog built using Astro, an SSG & SSR framework. Focuses heavily on content and
+features image compression and markdown pages. UI components and interactive map built using React,
+TypeScript, Jotai, SCSS, and is fully responsive.

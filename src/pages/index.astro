@@ -1,31 +1,29 @@
 ---
-import { getCollection } from "astro:content";
-import Layout from "@layouts/Layout.astro";
-import Header from "@components/Header.astro";
-import Footer from "@components/Footer.astro";
-import Card from "@components/Card.astro";
+import { getCollection } from "astro:content"
+import Layout from "@layouts/Layout.astro"
+import { Header } from "@components/Header"
+import Footer from "@components/Footer.astro"
+import Card from "@components/Card.astro"
 
-import LinkButton from "@components/LinkButton.astro";
-import Hr from "@components/Hr.astro";
-import Hero from "@components/Hero.astro";
+import Hero from "@components/Hero.astro"
 
-import getSortedPosts from "@utils/getSortedPosts";
-import { SOCIALS } from "@config";
-import { Image } from "astro:assets";
-import hero from "../assets/images/pragma.jpg";
-import { IconArrowRight, IconRobot } from "@tabler/icons-react";
+import getSortedPosts from "@utils/getSortedPosts"
+import { SOCIALS } from "@config"
+import { Image } from "astro:assets"
+import hero from "../assets/images/pragma.jpg"
+import { IconArrowRight, IconRobot } from "@tabler/icons-react"
 
-const posts = await getCollection("blog");
+const posts = await getCollection("blog")
 
-const sortedPosts = getSortedPosts(posts);
-const featuredPosts = sortedPosts.filter(({ data }) => data.featured);
-const recentPosts = sortedPosts.filter(({ data }) => !data.featured);
+const sortedPosts = getSortedPosts(posts)
+const featuredPosts = sortedPosts.filter(({ data }) => data.featured)
+const recentPosts = sortedPosts.filter(({ data }) => !data.featured)
 
-const socialCount = SOCIALS.filter(social => social.active).length;
+const socialCount = SOCIALS.filter(social => social.active).length
 ---
 
 <Layout>
-  <Header activeNav="home" />
+  <Header client:only="react" activeNav="home" />
   <main id="main-content">
     <Hero />
 
@@ -41,7 +39,7 @@ const socialCount = SOCIALS.filter(social => social.active).length;
 
     <div class="view-older">
       <a class="link-button accent full row" href="/posts/">
-        View older work <IconArrowRight />
+        View all projects <IconArrowRight />
       </a>
     </div>
 

@@ -18,6 +18,6 @@ logo: "../../assets/images/notebot-logo.png"
 themeColor: "#00eaff"
 ---
 
-Notebot is a demo for a simple React note-taking single page application. It was built in 2021 and refactored/updated in late 2023.
-
-Feel free to mess around! You aren't breaking anything. The demo is not intended for serious use, so your changes may be deleted at any time.
+Full-stack web app for note-taking built with React, Vite, and TypeScript. Implements state using Zustand &
+Jotai, Firebase back end to store user categories and notes, and a custom front end with rich text editing.
+Styled with SCSS, and is fully responsive.
