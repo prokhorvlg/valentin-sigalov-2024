@@ -3,12 +3,17 @@ import { getCollection } from "astro:content";
 import Layout from "@layouts/Layout.astro";
 import Header from "@components/Header.astro";
 import Footer from "@components/Footer.astro";
+import Card from "@components/Card.astro";
+
 import LinkButton from "@components/LinkButton.astro";
 import Hr from "@components/Hr.astro";
-import Card from "@components/Card";
-import Socials from "@components/Socials.astro";
+import Hero from "@components/Hero.astro";
+
 import getSortedPosts from "@utils/getSortedPosts";
 import { SOCIALS } from "@config";
+import { Image } from "astro:assets";
+import hero from "../assets/images/pragma.jpg";
+import { IconArrowRight, IconRobot } from "@tabler/icons-react";
 
 const posts = await getCollection("blog");
 
@@ -22,92 +27,59 @@ const socialCount = SOCIALS.filter(social => social.active).length;
 <Layout>
   <Header activeNav="home" />
   <main id="main-content">
-    <section id="hero">
-      <h1>Valentin Sigalov</h1>
-      <p>
-        Software engineer based in Philadelphia, PA. Over 8 years of experience in full-stack web development. (Also likes science fiction and drawing.)
-      </p>
-      {
-        // only display if at least one social link is enabled
-        socialCount > 0 && (
-          <div class="social-wrapper">
-            <Socials />
-          </div>
-        )
-      }
+    <Hero />
+
+    <section id="featured">
+      <ul>
+        {
+          featuredPosts.map(({ data, slug }) => (
+            <Card slug={slug} frontmatter={data} secHeading={false} />
+          ))
+        }
+      </ul>
     </section>
 
-    <!-- <Hr /> -->
-
-    {
-      featuredPosts.length > 0 && (
-        <>
-          <section id="featured">
-            <h2>Some of my projects</h2>
-            <ul>
-              {featuredPosts.map(({ data, slug }) => (
-                <Card
-                  href={`/posts/${slug}/`}
-                  frontmatter={data}
-                  secHeading={false}
-                />
-              ))}
-            </ul>
-          </section>
-          {recentPosts.length > 0 && <Hr />}
-        </>
-      )
-    }
-
-    <div class="all-posts-btn-wrapper">
-      <LinkButton href="/posts/">
-        All Projects
-        <svg xmlns="http://www.w3.org/2000/svg"
-          ><path
-            d="m11.293 17.293 1.414 1.414L19.414 12l-6.707-6.707-1.414 1.414L15.586 11H6v2h9.586z"
-          ></path>
-        </svg>
-      </LinkButton>
+    <div class="view-older">
+      <a class="link-button accent full row" href="/posts/">
+        View older work <IconArrowRight />
+      </a>
     </div>
+
+    <Image src={hero} alt="Pragma" class="image-main" />
+    <em class="image-description color-accent">PRAGMA says hi!</em>
   </main>
 
   <Footer />
 </Layout>
 
 <style>
-  /* ===== Hero Section ===== */
-  #hero {
-    @apply pb-6 pt-8;
-  }
-  #hero h1 {
-    @apply my-4 inline-block text-3xl font-bold sm:my-8 sm:text-5xl;
-  }
-  #hero .rss-link {
-    @apply mb-6;
-  }
-  #hero .rss-icon {
-    @apply mb-2 h-6 w-6 scale-110 fill-skin-accent sm:mb-3 sm:scale-125;
-  }
-  #hero p {
-    @apply my-2;
-  }
-  .social-wrapper {
-    @apply mt-4 flex flex-col sm:flex-row sm:items-center;
-  }
-  .social-links {
-    @apply mb-1 mr-2 whitespace-nowrap sm:mb-0;
+  #featured {
+    margin-bottom: 20px;
   }
 
-  /* ===== Featured & Recent Posts Sections ===== */
-  #featured,
-  #recent-posts {
-    @apply pb-6 pt-12;
+  .view-older {
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 120px;
   }
-  #featured h2,
-  #recent-posts h2 {
-    @apply text-2xl font-semibold tracking-wide;
+
+  .image-main {
+    margin: 0 auto;
+    width: 45rem;
+    max-width: 95%;
+    border: 1px solid rgba(var(--color-accent), 1);
+    padding: 4px;
   }
-  .all-posts-btn-wrapper {
-    @apply my-8 text-center;
+  @media (max-width: 1100px) {
+    .image-main {
+    }
+  }
+
+  .image-description {
+    margin: 10px auto 120px;
+    display: block;
+    text-align: center;
   }
 </style>

@@ -1,0 +1,41 @@
+---
+import Socials from "@components/Socials.astro";
+import { IconRobot } from "@tabler/icons-react";
+---
+
+<section class="hero">
+  <h1>
+    <span>Valentin Sigalov</span>
+    <IconRobot className="icon" size={60} />
+  </h1>
+  <p>
+    Software engineer based in Philadelphia, PA with over 8 years of experience
+    in full-stack web development.
+  </p>
+  <p>Loves science fiction and drawing.</p>
+  <Socials />
+</section>
+
+<style>
+  .hero {
+    padding: 110px 20px 80px;
+  }
+
+  h1 {
+    font-size: 64px;
+    font-family: var(--font-title);
+    font-weight: 700;
+    color: rgba(var(--color-accent), 1);
+  }
+  @media (max-width: 1100px) {
+    h1 {
+      line-height: 70px;
+      margin-bottom: 30px;
+    }
+  }
+
+  .icon {
+    margin-left: 0px;
+    margin-bottom: 10px;
+  }
+</style>

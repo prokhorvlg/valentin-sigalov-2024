@@ -20,6 +20,11 @@ const blog = defineCollection({
         .optional(),
       description: z.string(),
       canonicalURL: z.string().optional(),
+      sourceURL: z.string().optional(),
+      liveURL: z.string().optional(),
+      logo: image().optional(),
+      themeColor: z.string().optional(),
+      isInProgress: z.boolean().optional(),
     }),
 });
 

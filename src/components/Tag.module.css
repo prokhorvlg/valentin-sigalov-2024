@@ -1,0 +1,15 @@
+.tag {
+  border-bottom: 1px dashed;
+  margin-right: 10px;
+  position: relative;
+  display: inline-block;
+
+  &::before {
+    content: "#";
+  }
+
+  &:hover {
+    color: rgba(var(--color-accent), 1);
+    transform: translateY(-2px);
+  }
+}
