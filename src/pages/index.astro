@@ -11,6 +11,7 @@ import getSortedPosts from "@utils/getSortedPosts"
 import { SOCIALS } from "@config"
 import { Image } from "astro:assets"
 import hero from "../assets/images/pragma.jpg"
+import manipulators from "../assets/images/manipulators.webp"
 import { IconArrowRight, IconRobot } from "@tabler/icons-react"
 
 const posts = await getCollection("blog")
@@ -45,6 +46,9 @@ const socialCount = SOCIALS.filter(social => social.active).length
 
     <Image src={hero} alt="Pragma" class="image-main" />
     <em class="image-description color-accent">PRAGMA says hi!</em>
+
+    <Image src={manipulators} alt="Manipulators" class="image-main" />
+    <em class="image-description color-accent">A little comic I made</em>
   </main>
 
   <Footer />
@@ -76,7 +80,7 @@ const socialCount = SOCIALS.filter(social => social.active).length
   }
 
   .image-description {
-    margin: 10px auto 120px;
+    margin: 10px auto 60px;
     display: block;
     text-align: center;
   }

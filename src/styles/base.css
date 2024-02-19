@@ -134,6 +134,9 @@
 
     &.accent {
       color: rgba(var(--color-accent), 1);
+      svg path {
+        color: rgba(var(--color-accent), 1);
+      }
     }
   }
 }
@@ -178,5 +181,9 @@
   }
   em {
     margin-bottom: 30px;
+  }
+
+  hr {
+    border-color: rgba(var(--color-accent), 1);
   }
 }

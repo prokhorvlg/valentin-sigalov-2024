@@ -3,11 +3,17 @@ layout: ../layouts/ResumeLayout.astro
 title: "Resume"
 ---
 
-<h2 style="text-align: center; font-size: 48px; margin-bottom: 0px; margin-top: 40px;">Valentin Sigalov</h1>
+import DownloadResume from "../components/DownloadResume.astro"
 
-<p style="text-align: center; margin-top: 10px; margin-bottom: 20px">Philadelphia, PA | US Citizen (work authorization)</p>
+<h2 style="text-align: center; text-transform: none; font-size: 40px; margin-bottom: 0px; margin-top: 40px;">Valentin Sigalov</h2>
 
-> Software engineer with 8 years of professional experience in projects ranging from high-traffic, responsive websites to enterprise web applications and dashboards. Extensive experience working in financial and healthcare industries. Enjoys user-friendly interactive software, front end technologies, and learning new things.
+<p style="text-align: center; margin-top: 0px; margin-bottom: 20px"><em>Philadelphia, PA | US Citizen (work authorization)</em></p>
+
+Software engineer with 8 years of professional experience in projects ranging from high-traffic, responsive websites to enterprise web applications and dashboards.
+
+Extensive experience working in financial and healthcare industries.
+
+Enjoys user-friendly interactive software, front end technologies, and learning new things.
 
 ## 🎓 Education
 
@@ -79,3 +85,5 @@ _Front End Web Developer (Mar 2018 - Dec 2020)_
 - Implemented REST APIs and business logic to create dynamic, data-driven interfaces, such as the JPMC Careers
   search filter components
 - Utilized Git/BitBucket version control system, Jira-integrated branch management, and SonarQube linter to ensure code quality and consistency before reaching production platform
+
+<DownloadResume />
