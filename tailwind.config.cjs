@@ -55,7 +55,7 @@ module.exports = {
       },
       fontFamily: {
         title: ["Poppins", "sans-serif"],
-        mono: ["Kanit", "monospace"],
+        mono: ["IBM Plex Mono", "monospace"],
       },
 
       typography: {
